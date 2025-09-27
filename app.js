@@ -93,9 +93,9 @@ app.get("/demouser",async(req,res)=>{
     res.send(registeredUser);
 });
 
-// app.get("/",(req,res)=>{
-//     res.send("hello world");
-// })
+app.get("/",(req,res)=>{
+    res.redirect('/listings');
+})
 
 app.use('/listings',listingsRouter);
 app.use('/listings/:id/reviews',reviewRouter);
